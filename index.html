@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CinemaX</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="menu-toggle" onclick="toggleSideMenu()">
+        <span>&#9776;</span>
+      </div>
+      <div class="logo-container">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🎬</span>
+          <span class="logo-text">CinemaX</span>
+        </a>
+      </div>
+    </nav>
+    
+<!-- أضف هذا الكود بعد بداية div.side-menu في ملف index.html -->
+<div class="side-menu" id="sideMenu">
+  <div class="close-button" onclick="toggleSideMenu()">
+    <span>&#10005;</span>
+  </div>
+  <div class="user-details">
+    <div class="user-icon-wrapper">
+      <img src="https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png" alt="User Icon" class="user-icon">
+    </div>
+    <p class="username">Username</p>
+  </div>
+      
+  <ul class="side-links">
+    <li><a href="login.html">Login</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="#">My Tickets</a></li>
+    <li><a href="#">Settings</a></li>
+    <li><a href="#">Logout</a></li>
+  </ul>
+</div>
+  </header>
+  
+  <!-- الكاروسل الرئيسي -->
+  <section class="carousel">
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <div class="movie-slider" id="slider">
+      <!-- سيتم إضافة بطاقات الأفلام من جافا سكريبت -->
+    </div>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </section>
+  
+  <!-- قسم البحث -->
+  <section class="search-filter">
+    <input type="text" placeholder="Search for movies..." id="searchInput" oninput="showSuggestions()" onkeydown="handleEnter(event)" />
+    <button onclick="searchMovies()">🔍</button>
+    <div id="suggestions" class="suggestions"></div>
+  </section>
+
+<!-- أقسام الأفلام - التحديث الجديد -->
+<section class="movie-section">
+  <div>
+    <h2>Now Showing</h2>
+    <div id="availableMovies" class="movie-slider collapsed"></div>
+    <!-- زر عرض المزيد سيضاف تلقائياً من خلال JavaScript -->
+  </div>
+  <div>
+    <h2>Coming Soon</h2>
+    <div id="comingSoonMovies" class="movie-slider collapsed"></div>
+    <!-- زر عرض المزيد سيضاف تلقائياً من خلال JavaScript -->
+  </div>
+</section>
+
+  <!-- نافذة الخطأ -->
+  <div id="errorPopup" class="popup">
+    <p id="errorMessage"></p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+
+  <!-- الفوتر -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>CinemaX</h2>
+          <p>Enjoy the latest movies in style and comfort.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:info@cinemax.com">info@cinemax.com</a></p>
+          <p>Phone: <a href="tel:+966123456789">+966 123 456 789</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CinemaX. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
