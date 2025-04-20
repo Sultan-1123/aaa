@@ -894,8 +894,8 @@ header nav {
   }
 
   .carousel .movie-card {
-    width: 90px;
-    height: 170px;
+    width: 75px;
+    height: 155px;
     margin: 0 8px;
   }
 
@@ -930,7 +930,7 @@ header nav {
   }
 
   .search-group {
-    max-width: 50%; /* أقل كمان */
+    max-width: 70%; /* أقل كمان */
     border-radius: 14px;
   }
 
@@ -945,8 +945,8 @@ header nav {
   }
 
   .suggestions {
-    width: 50%;
-    max-width: 50%; /* نفس search-group */
+    width: 70%;
+    max-width: 70%; /* نفس search-group */
     border-radius: 12px;
     font-size: 13px;
     left: 50%;
@@ -958,6 +958,8 @@ header nav {
   }
 
     .footer-content {
+      display: flex;
+      flex-wrap: nowrap; /* ← تمنع النزول لسطر جديد */
     flex-direction: column;
     align-items: center;
     gap: 20px;
