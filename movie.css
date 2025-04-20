@@ -1,0 +1,618 @@
+body {
+    background-color: #1c1c1c;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+/* تنسيق الهيدر والتنقل */
+header {
+  background: #8B0000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+}
+
+.menu-toggle {
+  position: absolute;
+  left: 20px;
+  font-size: 26px;
+  color: white;
+  background-color: #000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-toggle:hover {
+  background-color: #222;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+}
+
+/* تنسيق القائمة الجانبية */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #1c1c1c;
+  color: white;
+  z-index: 999;
+  transition: 0.3s ease;
+  overflow-y: auto;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+  gap: 15px;
+}
+
+.user-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+  
+.username {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.side-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-links li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.3s;
+}
+
+.side-links li a:hover {
+  background-color: #333;
+}
+
+/* أضف هذا الكود بعد تنسيق .side-menu.active في ملف index.css */
+
+.close-button {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 20px;
+width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+color: white;
+}
+
+
+
+
+
+
+
+
+
+  .movie-container {
+    display: flex;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .movie-container img {
+    width: 300px;
+    height: 500px;
+    margin-right: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-container img:hover {
+    transform: scale(1.05);
+  }
+
+  .movie-info {
+    color: #ccc;
+    flex: 1;
+  }
+
+  .movie-info h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #ffffff;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 10px;
+  }
+
+  .movie-info p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .movie-meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
+  
+  .movie-meta div {
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .movie-meta i {
+    color: #8B0000;
+    margin-right: 5px;
+  }
+
+  .cast {
+    margin-top: 20px;
+  }
+  
+  .cast h4 {
+    font-size: 18px;
+    color: #ffffff;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+  }
+  
+  .cast-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+  }
+  
+  .cast-item {
+    background: #3c3c3c;
+    padding: 8px 12px;
+    border-radius: 20px;
+    list-style: none;
+    transition: all 0.3s ease;
+  }
+  
+
+
+  .movie-info label, .movie-info select, .movie-info button {
+    display: block;
+    margin: 15px 0;
+    font-size: 16px;
+  }
+
+  .movie-info select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3c3c3c;
+    color: white;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+  }
+  
+  .movie-info select:focus {
+    outline: 2px solid #8B0000;
+  }
+
+  .movie-info button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    background: #8B0000;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+
+  .movie-info button:hover {
+    background-color: #5f0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .back-home {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .back-home button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .back-home button:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+  }
+
+/* ============= الفوتر المحسّن ============= */
+.footer {
+background-color: #111;
+color: #fff;
+padding: 20px 0 10px; /* زيادة التباعد العلوي */
+border-top: 3px solid #8B0000; /* إضافة خط فاصل بلون مميز */
+}
+
+.container {
+width: 90%;
+max-width: 1200px; /* إضافة حد أقصى للعرض */
+margin: auto;
+}
+
+.footer-content {
+display: flex;
+flex-wrap: wrap; /* يسمح بالتفاف العناصر للشاشات الصغيرة */
+justify-content: space-between;
+gap: 30px;
+}
+
+/* تنسيق شعار الفوتر */
+.footer-logo {
+flex: 1 1 250px;
+}
+
+.footer-logo h2 {
+font-size: 24px;
+margin-bottom: 15px;
+position: relative;
+padding-bottom: 10px;
+}
+
+.footer-logo h2:after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 60px;
+height: 2px;
+background-color: #8B0000;
+}
+
+.footer-logo p {
+font-size: 14px;
+line-height: 1.6;
+color: #ccc;
+}
+
+/* تنسيق معلومات الاتصال */
+.footer-contact {
+flex: 1 1 250px;
+}
+
+.footer-contact h3 {
+font-size: 20px;
+margin-bottom: 18px;
+position: relative;
+padding-bottom: 10px;
+}
+
+.footer-contact h3:after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 40px;
+height: 2px;
+background-color: #8B0000;
+}
+
+.footer-contact p {
+font-size: 14px;
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+}
+
+.footer-contact p i {
+margin-right: 10px;
+color: #8B0000;
+}
+
+.footer-contact a {
+color: #fff;
+text-decoration: none;
+transition: color 0.3s;
+position: relative;
+padding-bottom: 2px;
+}
+
+.footer-contact a:hover {
+color: #ff3c3c;
+}
+
+
+
+.footer-contact a:hover:after {
+width: 100%;
+}
+
+/* تنسيق وسائل التواصل الاجتماعي */
+.footer-social {
+flex: 1 1 250px;
+}
+
+.footer-social h3 {
+font-size: 20px;
+margin-bottom: 18px;
+position: relative;
+padding-bottom: 10px;
+}
+
+
+.social-icons {
+display: flex;
+gap: 15px;
+margin-top: 15px;
+}
+
+.social-icons a {
+color: #fff;
+font-size: 16px;
+width: 36px;
+height: 36px;
+border-radius: 50%;
+background-color: #333;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+color: #fff;
+background-color: #8B0000;
+transform: translateY(-3px);
+}
+
+/* تحسين الجزء السفلي من الفوتر */
+.footer-bottom {
+text-align: center;
+margin-top: 25px;
+border-top: 1px solid #333;
+padding-top: 15px;
+font-size: 14px;
+color: #aaa;
+}
+
+
+/* أصغر الشاشات - جوالات صغيرة */
+@media (max-width: 414px) {
+.movie-container {
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.movie-container img {
+  width: 200px;
+  height: 300px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.movie-info {
+  text-align: center;
+}
+
+.movie-info select, .movie-info button {
+  max-width: 100%;
+}
+
+.movie-meta {
+  justify-content: center;
+}
+
+.cast-list {
+  justify-content: center;
+}
+.container {
+  width: 95%;
+}
+
+.footer-content {
+  gap: 20px;
+}
+
+.footer-logo h2,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 16px;
+  padding-bottom: 8px;
+}
+
+.footer-logo p,
+.footer-contact p {
+  font-size: 12px;
+}
+
+.social-icons {
+  gap: 10px;
+}
+
+.social-icons a {
+  width: 30px;
+  height: 30px;
+}
+}
+
+
+@media (max-width: 576px) {
+
+
+.footer {
+  padding: 15px 0 5px;
+}
+
+.footer-logo h2,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.footer-logo p,
+.footer-contact p {
+  font-size: 13px;
+}
+
+.social-icons a {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  font-size: 12px;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+
+}
+/* شاشات متوسطة - تابلت */
+@media (max-width: 768px) {
+.movie-container {
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.movie-container img {
+  width: 80%;
+  height: auto;
+  margin-right: 0;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+.movie-info {
+  text-align: center;
+}
+
+.movie-info select, .movie-info button {
+  max-width: 100%;
+}
+
+.movie-meta {
+  justify-content: center;
+}
+
+.cast-list {
+  justify-content: center;
+}
+.footer-content {
+  text-align: center;
+  gap: 20px;
+}
+
+.footer-logo h2:after,
+.footer-contact h3:after,
+.footer-social h3:after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-contact p {
+  justify-content: center;
+}
+
+.social-icons {
+  justify-content: center;
+}
+}
+
+/* شاشات كبيرة - لابتوبات */
+@media (max-width: 992px) {
+.movie-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-container img {
+  width: 300px;
+  height: 500px;
+  margin: 0 0 20px 0;
+  border-radius: 40px;
+}
+
+.movie-info {
+  text-align: center;
+}
+.footer-content {
+  gap: 40px;
+}
+}
+
+
+
+
+
+  
+ 
