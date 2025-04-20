@@ -601,16 +601,7 @@ header nav {
   color: #ff3c3c;
 }
 
-.footer-contact a:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #ff3c3c;
-  transition: width 0.3s ease;
-}
+
 
 .footer-contact a:hover:after {
   width: 100%;
@@ -628,15 +619,6 @@ header nav {
   padding-bottom: 10px;
 }
 
-.footer-social h3:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 2px;
-  background-color: #8B0000;
-}
 
 .social-icons {
   display: flex;
@@ -716,7 +698,7 @@ header nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(139, 0, 0, 0.7);
+    background: #222;
     border: none;
     color: white;
     font-size: 20px;
