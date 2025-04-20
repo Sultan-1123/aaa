@@ -880,40 +880,50 @@ header nav {
 
 }
 
-@media (max-width: 414px ) {
+@media (max-width: 414px) {
+  /* Container */
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+
+  /* Movie Section */
   .movie-section .movie-slider {
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
   }
-
+  
   .movie-section .movie-card {
-    max-width: none; /* على الشاشات الصغيرة يمكن للبطاقة أن تأخذ العرض الكامل للخلية */
+    max-width: none; /* Allow cards to take full width of cell on small screens */
   }
-
+  
   .movie-info h4 {
     font-size: 14px;
     margin-bottom: 5px;
   }
-
+  
   .movie-info p {
     font-size: 12px;
     margin-bottom: 5px;
   }
+  
+  /* Carousel */
   .carousel {
     height: 260px;
   }
-
+  
   .carousel .movie-slider {
     width: 65%;
     gap: 15px;
   }
-
+  
   .carousel .movie-card {
     width: 75px;
     height: 155px;
     margin: 0 8px;
   }
-
+  
+  /* Carousel Navigation */
   .carousel button {
     position: absolute;
     top: 50%;
@@ -932,85 +942,80 @@ header nav {
     justify-content: center;
     transition: all 0.3s ease;
   }
-
+  
   .prev {
     left: 0%;
   }
-
+  
   .next {
     right: 0%;
   }
+  
+  /* Search and Filter */
   .search-filter {
     padding: 20px 10px;
   }
-
+  
   .search-group {
-    max-width: 70%; /* أقل كمان */
+    max-width: 70%;
     border-radius: 14px;
   }
-
+  
   .search-filter input {
     padding: 10px 14px;
     font-size: 14px;
   }
-
+  
   .search-filter button {
     font-size: 12px;
     margin-right: 8px;
   }
-
+  
+  /* Search Suggestions */
   .suggestions {
     width: 70%;
-    max-width: 70%; /* نفس search-group */
+    max-width: 70%;
     border-radius: 12px;
     font-size: 13px;
     left: 50%;
     transform: translateX(-50%);
   }
-
+  
   .suggestions p {
     padding: 7px 14px;
   }
-
   
-.container {
-  width: 100%;
-  margin: auto;
-}
-
-    .footer-content {
+  /* Footer */
+  .footer-content {
     flex-direction: row;
     align-items: center;
     gap: 15px;
   }
-
+  
   .footer-logo,
   .footer-contact,
   .footer-social {
     flex: 1 1 auto;
     text-align: center;
   }
-
+  
   .footer-logo h2,
   .footer-contact h3,
   .footer-social h3 {
     font-size: 15px;
   }
-
+  
   .footer-contact p,
   .footer-logo p {
     font-size: 12px;
   }
-
+  
   .social-icons a {
     font-size: 15px;
     margin-right: 15px;
   }
-
+  
   .footer-bottom {
     font-size: 12px;
   }
-
-
 }
-
