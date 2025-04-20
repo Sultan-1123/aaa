@@ -1,127 +1,125 @@
 /* تنسيق عام */
 body {
-    background-color: #1c1c1c;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-  }
+  background-color: #1c1c1c;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
   
-  /* تنسيق الهيدر والتنقل */
-  header {
-    background: #8B0000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  }
+/* تنسيق الهيدر والتنقل */
+header {
+  background: #8B0000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+}
+
+.menu-toggle {
+  position: absolute;
+  left: 20px;
+  font-size: 26px;
+  color: white;
+  background-color: #000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-toggle:hover {
+  background-color: #222;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+}
+
+/* تنسيق القائمة الجانبية */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #1c1c1c;
+  color: white;
+  z-index: 999;
+  transition: 0.3s ease;
+  overflow-y: auto;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+  gap: 15px;
+}
+
+.user-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
   
-  header nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0;
-    position: relative;
-  }
-  
-  .menu-toggle {
-    position: absolute;
-    left: 20px;
-    font-size: 26px;
-    color: white;
-    background-color: #000;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .menu-toggle:hover {
-    background-color: #222;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-  
-  .logo-icon {
-    font-size: 28px;
-    margin-right: 10px;
-  }
-  
-  .logo-text {
-    font-size: 26px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  /* تنسيق القائمة الجانبية */
-  .side-menu {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #1c1c1c;
-    color: white;
-    z-index: 999;
-    transition: 0.3s ease;
-    overflow-y: auto;
-  }
-  
-  .side-menu.active {
-    left: 0;
-  }
-  
-  .user-details {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #333;
-    gap: 15px;
-  }
-  
-  .user-icon-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .user-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-    
-  .username {
-    font-weight: bold;
-    font-size: 17px;
-  }
-  
-  .side-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .side-links li a {
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid #333;
-    transition: background-color 0.3s;
-  }
-  
-  .side-links li a:hover {
-    background-color: #333;
-  }
-  
-/* أضف هذا الكود بعد تنسيق .side-menu.active في ملف index.css */
+.username {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.side-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-links li a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.3s;
+}
+
+.side-links li a:hover {
+  background-color: #333;
+}
 
 .close-button {
   position: absolute;
@@ -137,21 +135,6 @@ body {
   color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 /* ============= قسم الكاروسل الرئيسي ============= */
 .carousel {
   position: relative;
@@ -172,7 +155,6 @@ body {
   width: 80%;
   max-width: 1200px;
   gap: 25px;
-
   height: 100%;
   position: relative;
 }
@@ -214,7 +196,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   transition: all 0.3s ease;
   border-radius: 10px;
 }
@@ -319,238 +300,97 @@ body {
   transform: scale(1.2);
 }
 
-/* تحسينات الاستجابة للشاشات المختلفة */
-
-
-/* تحسينات الاستجابة للشاشات المختلفة */
-@media (max-width: 1300px) {
-
-  .prev {
-    left: 1%;
-  }
-  
-  .next {
-    right: 1%;
-  }
+/* ============= تحسين قسم البحث ============= */
+.search-filter {
+  padding: 25px 15px;
+  text-align: center;
+  background-color: #222; /* تم تغيير اللون ليتطابق مع لون الكاروسل */
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+  margin-bottom: 15px; /* مسافة مناسبة من القسم التالي */
 }
 
-
-@media (max-width: 1100px) {
-  .carousel {
-    height: 350px;
-  }
-  
-  .carousel .movie-slider {
-    width: 70%;
-  }
-  
-  .carousel .movie-card {
-    width: 150px;
-    height: 240px;
-    margin: 0 12px;
-  }
-  .prev {
-    left: 1%;
-  }
-  
-  .next {
-    right: 1%;
-  }
+/* تنسيق مجموعة البحث */
+.search-group {
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* عرض أقصى مناسب */
+  background: #333; /* خلفية للتجميع */
+  border-radius: 20px; /* حواف دائرية */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل أكثر بروزاً */
+  border: 1px solid #444; /* حدود رفيعة */
 }
 
-@media (max-width: 992px) {
-  .carousel {
-    height: 320px;
-  }
-  
-  .carousel .movie-slider {
-    width: 60%;
-    gap: 40px;
-
-  }
-  .carousel .movie-card {
-    width: 160px;
-    height: 250px;
-    margin: 0 12px;
-  }
-}
-
-
-
-
-@media (max-width: 768px) {
-  .carousel {
-    height: 300px;
-  }
-  
-  .carousel .movie-slider {
-    width: 60%;
-    gap: 15px;
-
-  }
-
-  
-  .carousel .movie-card {
-    width: 130px;
-    height: 215px;
-    margin: 0 10px;
-  }
-  
-
-  
-  .prev {
-    left: 3%;
-  }
-  
-  .next {
-    right: 3%;
-  }
-}
-
-
-
-@media (max-width: 576px) {
-  .carousel {
-    height: 260px;
-  }
-  
-  .carousel .movie-slider {
-    width: 65%;
-    gap: 15px;
-
-  }
-  
-  .carousel .movie-card {
-    width: 110px;
-    height: 180px;
-    margin: 0 8px;
-  }
-  /* أزرار التنقل في الكاروسل - تم تحسين الموضع */
-.carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(139, 0, 0, 0.7);
+.search-filter input {
+  flex: 1;
+  padding: 15px 20px;
   border: none;
+  outline: none;
+  background: #333; /* خلفية للتجميع */
+  color: white; /* لون النص أبيض */
+  font-size: 16px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.search-filter input::placeholder {
+  color: #aaa; /* لون العلامة المائية */
+  opacity: 0.8;
+}
+
+.search-filter button {
+  background: #333; /* خلفية للتجميع */
   color: white;
-  font-size: 20px;
+  border: none;
   cursor: pointer;
-  z-index: 10;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  margin-right: 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
 }
-    
-  .prev {
-    left: 0%;
-  }
-  
-  .next {
-    right: 0%;
-  }
+
+.search-filter button:hover {
+  background-color:#333; /* لون أفتح قليلاً عند التحويم */
+  transform: translateX(2px); /* تأثير حركة بسيط */
 }
-  
+
+/* تنسيق الاقتراحات */
+.suggestions {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333; /* تم تغيير لون الخلفية */
+  color: white; /* تم تغيير لون النص */
+  border-radius: 20px;
+  width: 500px; /* نفس عرض حقل البحث */
+  margin-top: 9px;
+  text-align: left;
+  padding: 5px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* ظل قوي */
+  z-index: 100;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.suggestions p {
+  margin-bottom: -5px;
+  margin-top: -5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.2s;
+  border-bottom: 1px solid #444; /* حدود أغمق */
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
-/* ============= تحسين قسم البحث ============= */
-.search-filter {
-    padding: 25px 15px;
-    text-align: center;
-    background-color: #1c1c1c;
-    position: relative;
-  }
-  
-  .search-filter input {
-    padding: 12px 15px;
-    width: 280px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 16px;
-  }
-  
-  .search-filter button {
-    padding: 12px 15px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-  }
-  
-  .search-filter button:hover {
-    transform: scale(1.05);
-  }
-  
-  .suggestions {
-    display: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    color: black;
-    border-radius: 5px;
-    width: 280px;
-    margin-top: 5px;
-    text-align: left;
-    padding: 5px 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 100;
-    max-height: 250px;
-    overflow-y: auto;
-  }
-  
-  .suggestions p {
-    margin: 0;
-    cursor: pointer;
-    padding: 10px 15px;
-    transition: background-color 0.2s;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .suggestions p:last-child {
-    border-bottom: none;
-  }
-  
-  .suggestions p:hover {
-    background-color: #f0f0f0;
-    color: #8B0000;
-  }  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.suggestions p:hover {
+  background: #8B0000;
+  color: white;
+}
 
 
 /* تحسين تنسيق قوائم الأفلام المتاحة والقادمة */
@@ -574,7 +414,7 @@ body {
   width: 100%;
   max-width: 100px; /* تحديد العرض الأقصى للبطاقة على الشاشات الكبيرة */
   aspect-ratio: 2/3;
-  border-radius:25px;
+  border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
   cursor: pointer;
@@ -625,25 +465,226 @@ body {
   align-items: center;
 }
 
+/* ============= نافذة الخطأ ============= */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1c1c1c;
+  color: white;
+  padding: 30px 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 1000;
+  max-width: 80%;
+  text-align: center;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.popup p {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.popup button {
+  background-color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.popup button:hover {
+  background-color: #eee;
+  transform: scale(1.05);
+}
+
+/* ============= الفوتر ============= */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: nowrap; /* ← تمنع النزول لسطر جديد */
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer-logo,
+.footer-contact,
+.footer-social {
+  flex: 1 1 250px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-contact p,
+.footer-logo p {
+  font-size: 13px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 15px;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff3c3c;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+  color: #ff3c3c;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ============================== */
+/* === جميع Media Queries منظمة === */
+/* ============================== */
+
+/* ====== Media Queries للكاروسل ====== */
 
 
-@media (min-width: 1200px) {
-  .movie-section .movie-slider {
-    gap: 90px;
+@media (max-width: 576px) {
+  .carousel {
+    height: 260px;
   }
-  
-  .movie-section .movie-card {
-    max-width: 210px;
+
+  .carousel .movie-slider {
+    width: 65%;
+    gap: 15px;
+  }
+
+  .carousel .movie-card {
+    width: 110px;
+    height: 180px;
+    margin: 0 8px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(139, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .prev {
+    left: 0%;
+  }
+
+  .next {
+    right: 0%;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+/* ====== Media Queries لأقسام الأفلام ====== */
+@media (min-width: 1200px) {
+  
   .movie-section .movie-slider {
     gap: 90px;
   }
+
+  .movie-section .movie-card {
+    max-width: 210px;
+  }
+  .carousel {
+    height: 350px;
+  }
+
+  .carousel .movie-slider {
+    width: 70%;
+  }
+
+  .carousel .movie-card {
+    width: 150px;
+    height: 240px;
+    margin: 0 12px;
+  }
+
+  .prev {
+    left: 1%;
+  }
+
+  .next {
+    right: 1%;
+  }
+
   
+}
+
+@media (min-width: 992px)  {
+  .movie-section .movie-slider {
+    gap: 90px;
+  }
+
   .movie-section .movie-card {
     max-width: 200px;
+  }
+  .carousel {
+    height: 320px;
+  }
+
+  .carousel .movie-slider {
+    width: 60%;
+    gap: 40px;
+  }
+
+  .carousel .movie-card {
+    width: 160px;
+    height: 250px;
+    margin: 0 12px;
   }
 }
 
@@ -652,7 +693,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 90px;
   }
-  
+
   .movie-section .movie-card {
     max-width: 180px;
   }
@@ -663,18 +704,71 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 70px;
   }
-  
+
   .movie-section .movie-card {
     max-width: 160px;
   }
-  
+
   .movie-info h4 {
     font-size: 16px;
   }
-  
+
   .movie-info p {
     font-size: 14px;
   }
+  .carousel {
+    height: 300px;
+  }
+
+  .carousel .movie-slider {
+    width: 60%;
+    gap: 15px;
+  }
+
+  .carousel .movie-card {
+    width: 130px;
+    height: 215px;
+    margin: 0 10px;
+  }
+
+  .prev {
+    left: 3%;
+  }
+
+  .next {
+    right: 3%;
+  }
+  .search-filter {
+    padding: 20px 10px;
+  }
+
+  .search-group {
+    max-width: 75%; /* أقل من قبل */
+    border-radius: 16px;
+  }
+
+  .search-filter input {
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .search-filter button {
+    font-size: 13px;
+    margin-right: 10px;
+  }
+
+  .suggestions {
+    width: 100%;
+    max-width: 75%; /* نفس search-group */
+    font-size: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .suggestions p {
+    padding: 8px 16px;
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -682,170 +776,91 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
   }
-  
+
   .movie-section .movie-card {
     max-width: none; /* على الشاشات الصغيرة يمكن للبطاقة أن تأخذ العرض الكامل للخلية */
   }
-  
+
   .movie-info h4 {
     font-size: 14px;
     margin-bottom: 5px;
   }
-  
+
   .movie-info p {
     font-size: 12px;
     margin-bottom: 5px;
   }
-}  
-  
+  .carousel {
+    height: 260px;
+  }
 
+  .carousel .movie-slider {
+    width: 65%;
+    gap: 15px;
+  }
 
+  .carousel .movie-card {
+    width: 110px;
+    height: 180px;
+    margin: 0 8px;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* ============= نافذة الخطأ ============= */
-  .popup {
-    position: fixed;
+  .carousel button {
+    position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #1c1c1c;
-    color: white;
-    padding: 30px 40px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    display: none;
-    z-index: 1000;
-    max-width: 80%;
-    text-align: center;
-    max-height: 300px;
-    overflow-y: auto;
-  }
-  
-  .popup p {
-    margin: 0;
-    padding-bottom: 20px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .popup button {
-    background-color: #fff;
+    transform: translateY(-50%);
+    background: rgba(139, 0, 0, 0.7);
     border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: 8px;
+    color: white;
+    font-size: 20px;
     cursor: pointer;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
-    margin-top: 15px;
   }
-  
-  .popup button:hover {
-    background-color: #eee;
-    transform: scale(1.05);
+
+  .prev {
+    left: 0%;
   }
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-  /* ============= الفوتر ============= */
-  .footer {
-    background-color: #111;
-    color: #fff;
-    padding: 10px 0;
+  .next {
+    right: 0%;
   }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+  .search-filter {
+    padding: 20px 10px;
   }
-  
- .footer-content {
-  display: flex;
-  flex-wrap: nowrap; /* ← تمنع النزول لسطر جديد */
-  justify-content: space-between;
-  gap: 30px;
-  overflow-x: auto; /* ← يسمح بالسحب إذا صغر العرض */
+
+  .search-group {
+    max-width: 70%; /* أقل كمان */
+    border-radius: 14px;
+  }
+
+  .search-filter input {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .search-filter button {
+    font-size: 12px;
+    margin-right: 8px;
+  }
+
+  .suggestions {
+    width: 100%;
+    max-width: 70%; /* نفس search-group */
+    border-radius: 12px;
+    font-size: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .suggestions p {
+    padding: 7px 14px;
+  }
+
 }
-
-  
-  .footer-logo,
-  .footer-contact,
-  .footer-social {
-    flex: 1 1 250px;
-  }
-  
-  .footer-logo h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-contact h3,
-  .footer-social h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-contact p,
-  .footer-logo p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  
-  .social-icons a {
-    color: #fff;
-    font-size: 18px;
-    margin-right: 15px;
-    transition: color 0.3s;
-  }
-  
-  .social-icons a:hover {
-    color: #ff3c3c;
-  }
-  
-  .footer-contact a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-contact a:hover {
-    color: #ff3c3c;
-  }
-  
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 25px;
-    border-top: 1px solid #444;
-    padding-top: 15px;
-    font-size: 14px;
-    color: #aaa;
-  }
-  

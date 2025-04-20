@@ -122,7 +122,7 @@ function updateSlider() {
     visibleCount = 3; // للشاشات المتوسطة والصغيرة
   }
 
-  if (screenWidth <= 1000) {
+  if (screenWidth <= 1200) {
     visibleCount = 3; // للشاشات المتوسطة والصغيرة
   }
   
