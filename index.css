@@ -247,7 +247,7 @@ header nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(139, 0, 0, 0.7);
+  background: #222;
   border: none;
   color: white;
   font-size: 20px;
@@ -263,7 +263,7 @@ header nav {
 }
 
 .carousel button:hover {
-  background: rgba(139, 0, 0, 1);
+  background: #222;
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -943,7 +943,7 @@ header nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(139, 0, 0, 0.7);
+    background: #222;
     border: none;
     color: white;
     font-size: 20px;
@@ -1066,7 +1066,7 @@ header nav {
   
   .carousel .movie-card {
     width: 75px;
-    height: 155px;
+    height: 140px;
     margin: 0 8px;
   }
   
@@ -1075,7 +1075,7 @@ header nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(139, 0, 0, 0.7);
+    background: #222;
     border: none;
     color: white;
     font-size: 20px;
