@@ -514,7 +514,7 @@ header nav {
 }
 
 .container {
-  width: 95%;
+  width: 90%;
   max-width: 1200px;
   margin: auto;
 }
@@ -863,4 +863,104 @@ header nav {
     padding: 7px 14px;
   }
 
+}
+
+/* ====== Small Devices (iPhone XR & similar ~ 414px) ====== */
+@media (max-width: 576px) {
+  /* قسم الأفلام */
+  .movie-section .movie-slider {
+    grid-template-columns: repeat(2, 1fr); /* 2 فقط أفضل لهاتف XR */
+    gap: 30px;
+  }
+
+  .movie-section .movie-card {
+    max-width: 100%; /* خليها تاخذ الخلية كاملة */
+  }
+
+  .movie-info h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .movie-info p {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  /* الكاروسيل */
+  .carousel {
+    height: 240px;
+  }
+
+  .carousel .movie-slider {
+    width: 90%;
+    gap: 12px;
+  }
+
+  .carousel .movie-card {
+    width: 100px;
+    height: 160px;
+    margin: 0 6px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(139, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  /* شريط البحث والفلاتر */
+  .search-filter {
+    padding: 16px 10px;
+  }
+
+  .search-group {
+    max-width: 90%;
+    border-radius: 12px;
+  }
+
+  .search-filter input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .search-filter button {
+    font-size: 11px;
+    margin-right: 6px;
+  }
+
+  /* الاقتراحات */
+  .suggestions {
+    width: 100%;
+    max-width: 90%;
+    border-radius: 10px;
+    font-size: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .suggestions p {
+    padding: 6px 12px;
+  }
 }
