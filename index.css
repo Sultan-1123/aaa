@@ -515,7 +515,6 @@ header nav {
 
 .container {
   width: 90%;
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -973,10 +972,16 @@ header nav {
     padding: 7px 14px;
   }
 
+  
+.container {
+  width: 100%;
+  margin: auto;
+}
+
     .footer-content {
     flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
   }
 
   .footer-logo,
@@ -989,7 +994,7 @@ header nav {
   .footer-logo h2,
   .footer-contact h3,
   .footer-social h3 {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .footer-contact p,
@@ -998,7 +1003,7 @@ header nav {
   }
 
   .social-icons a {
-    font-size: 18px;
+    font-size: 15px;
     margin-right: 15px;
   }
 
