@@ -585,6 +585,22 @@ header nav {
 /* ====== Media Queries للكاروسل ====== */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 576px) {
   .carousel {
     height: 260px;
@@ -958,9 +974,7 @@ header nav {
   }
 
     .footer-content {
-      display: flex;
-      flex-wrap: nowrap; /* ← تمنع النزول لسطر جديد */
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 20px;
   }
