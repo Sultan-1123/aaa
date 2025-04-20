@@ -578,231 +578,128 @@ header nav {
   color: #aaa;
 }
 
-/* ====== أساسيات عامة ====== */
-.carousel {
-  position: relative;
-  overflow: hidden;
-}
+/* ============================== */
+/* === جميع Media Queries منظمة === */
+/* ============================== */
 
-.carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(139, 0, 0, 0.7);
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
+/* ====== Media Queries للكاروسل ====== */
 
-.carousel button:hover {
-  background: rgba(139, 0, 0, 0.9);
-}
 
-/* ====== شاشات صغيرة جدًا (الهواتف الذكية الصغيرة) ====== */
-@media (max-width: 375px) {
-  /* كاروسيل */
+@media (max-width: 576px) {
   .carousel {
-    height: 220px;
+    height: 260px;
   }
 
   .carousel .movie-slider {
-    width: 95%;
-    gap: 10px;
-  }
-
-  .carousel .movie-card {
-    width: 90px;
-    height: 150px;
-    margin: 0 5px;
-  }
-
-  .carousel button {
-    font-size: 16px;
-    width: 26px;
-    height: 26px;
-  }
-
-  .prev {
-    left: 0;
-  }
-
-  .next {
-    right: 0;
-  }
-
-  /* قسم الأفلام */
-  .movie-section .movie-slider {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .movie-section .movie-card {
-    max-width: 100%;
-  }
-
-  .movie-info h4 {
-    font-size: 12px;
-    margin-bottom: 4px;
-  }
-
-  .movie-info p {
-    font-size: 10px;
-    margin-bottom: 3px;
-  }
-
-  /* البحث والفلاتر */
-  .search-filter {
-    padding: 14px 8px;
-  }
-
-  .search-group {
-    max-width: 95%;
-    border-radius: 10px;
-  }
-
-  .search-filter input {
-    padding: 8px 10px;
-    font-size: 12px;
-  }
-
-  .search-filter button {
-    font-size: 10px;
-    margin-right: 5px;
-  }
-
-  .suggestions {
-    max-width: 95%;
-    border-radius: 8px;
-    font-size: 11px;
-  }
-
-  .suggestions p {
-    padding: 5px 10px;
-  }
-}
-
-/* ====== شاشات صغيرة (iPhone XR & مشابهة) ====== */
-@media (min-width: 376px) and (max-width: 576px) {
-  /* كاروسيل */
-  .carousel {
-    height: 240px;
-  }
-
-  .carousel .movie-slider {
-    width: 90%;
-    gap: 12px;
-  }
-
-  .carousel .movie-card {
-    width: 100px;
-    height: 160px;
-    margin: 0 6px;
-  }
-
-  .carousel button {
-    font-size: 18px;
-    width: 28px;
-    height: 28px;
-  }
-
-  .prev {
-    left: 0;
-  }
-
-  .next {
-    right: 0;
-  }
-
-  /* قسم الأفلام */
-  .movie-section .movie-slider {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .movie-section .movie-card {
-    max-width: 100%;
-  }
-
-  .movie-info h4 {
-    font-size: 13px;
-    margin-bottom: 5px;
-  }
-
-  .movie-info p {
-    font-size: 11px;
-    margin-bottom: 4px;
-  }
-
-  /* البحث والفلاتر */
-  .search-filter {
-    padding: 16px 10px;
-  }
-
-  .search-group {
-    max-width: 90%;
-    border-radius: 12px;
-  }
-
-  .search-filter input {
-    padding: 10px 12px;
-    font-size: 13px;
-  }
-
-  .search-filter button {
-    font-size: 11px;
-    margin-right: 6px;
-  }
-
-  .suggestions {
-    max-width: 90%;
-    border-radius: 10px;
-    font-size: 12px;
-  }
-
-  .suggestions p {
-    padding: 6px 12px;
-  }
-}
-
-/* ====== شاشات متوسطة (أيباد صغير وهواتف كبيرة) ====== */
-@media (min-width: 577px) and (max-width: 768px) {
-  /* كاروسيل */
-  .carousel {
-    height: 300px;
-  }
-
-  .carousel .movie-slider {
-    width: 60%;
+    width: 65%;
     gap: 15px;
   }
 
   .carousel .movie-card {
-    width: 130px;
-    height: 215px;
-    margin: 0 10px;
+    width: 110px;
+    height: 180px;
+    margin: 0 8px;
   }
 
   .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(139, 0, 0, 0.7);
+    border: none;
+    color: white;
     font-size: 20px;
-    width: 32px;
-    height: 32px;
+    cursor: pointer;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
   }
 
   .prev {
-    left: 3%;
+    left: 0%;
   }
 
   .next {
-    right: 3%;
+    right: 0%;
+  }
+}
+
+/* ====== Media Queries لأقسام الأفلام ====== */
+@media (min-width: 1200px) {
+  
+  .movie-section .movie-slider {
+    gap: 90px;
   }
 
-  /* قسم الأفلام */
+  .movie-section .movie-card {
+    max-width: 210px;
+  }
+  .carousel {
+    height: 350px;
+  }
+
+  .carousel .movie-slider {
+    width: 70%;
+  }
+
+  .carousel .movie-card {
+    width: 150px;
+    height: 240px;
+    margin: 0 12px;
+  }
+
+  .prev {
+    left: 1%;
+  }
+
+  .next {
+    right: 1%;
+  }
+
+  
+}
+
+@media (min-width: 992px)  {
+  .movie-section .movie-slider {
+    gap: 90px;
+  }
+
+  .movie-section .movie-card {
+    max-width: 200px;
+  }
+  .carousel {
+    height: 320px;
+  }
+
+  .carousel .movie-slider {
+    width: 60%;
+    gap: 40px;
+  }
+
+  .carousel .movie-card {
+    width: 160px;
+    height: 250px;
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 991px) {
+  .movie-section .movie-slider {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px;
+  }
+
+  .movie-section .movie-card {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
   .movie-section .movie-slider {
     grid-template-columns: repeat(3, 1fr);
     gap: 70px;
@@ -819,14 +716,34 @@ header nav {
   .movie-info p {
     font-size: 14px;
   }
+  .carousel {
+    height: 300px;
+  }
 
-  /* البحث والفلاتر */
+  .carousel .movie-slider {
+    width: 60%;
+    gap: 15px;
+  }
+
+  .carousel .movie-card {
+    width: 130px;
+    height: 215px;
+    margin: 0 10px;
+  }
+
+  .prev {
+    left: 3%;
+  }
+
+  .next {
+    right: 3%;
+  }
   .search-filter {
     padding: 20px 10px;
   }
 
   .search-group {
-    max-width: 75%;
+    max-width: 75%; /* أقل من قبل */
     border-radius: 16px;
   }
 
@@ -841,298 +758,238 @@ header nav {
   }
 
   .suggestions {
-    max-width: 75%;
+    width: 100%;
+    max-width: 75%; /* نفس search-group */
     font-size: 14px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .suggestions p {
     padding: 8px 16px;
   }
+
 }
 
-/* ====== شاشات متوسطة-كبيرة (أيباد & لابتوب صغير) ====== */
-@media (min-width: 769px) and (max-width: 991px) {
-  /* كاروسيل */
+@media (max-width: 576px) {
+  .movie-section .movie-slider {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+  }
+
+  .movie-section .movie-card {
+    max-width: none; /* على الشاشات الصغيرة يمكن للبطاقة أن تأخذ العرض الكامل للخلية */
+  }
+
+  .movie-info h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .movie-info p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
   .carousel {
-    height: 310px;
+    height: 260px;
   }
 
   .carousel .movie-slider {
     width: 65%;
+    gap: 15px;
+  }
+
+  .carousel .movie-card {
+    width: 110px;
+    height: 180px;
+    margin: 0 8px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(139, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .prev {
+    left: 0%;
+  }
+
+  .next {
+    right: 0%;
+  }
+  .search-filter {
+    padding: 20px 10px;
+  }
+
+  .search-group {
+    max-width: 70%; /* أقل كمان */
+    border-radius: 14px;
+  }
+
+  .search-filter input {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .search-filter button {
+    font-size: 12px;
+    margin-right: 8px;
+  }
+
+  .suggestions {
+    width: 100%;
+    max-width: 70%; /* نفس search-group */
+    border-radius: 12px;
+    font-size: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .suggestions p {
+    padding: 7px 14px;
+  }
+
+}
+
+@media (max-width: 414px ) {
+  .movie-section .movie-slider {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+  }
+
+  .movie-section .movie-card {
+    max-width: none; /* على الشاشات الصغيرة يمكن للبطاقة أن تأخذ العرض الكامل للخلية */
+  }
+
+  .movie-info h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .movie-info p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .carousel {
+    height: 260px;
+  }
+
+  .carousel .movie-slider {
+    width: 65%;
+    gap: 15px;
+  }
+
+  .carousel .movie-card {
+    width: 90px;
+    height: 170px;
+    margin: 0 8px;
+  }
+
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(139, 0, 0, 0.7);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .prev {
+    left: 0%;
+  }
+
+  .next {
+    right: 0%;
+  }
+  .search-filter {
+    padding: 20px 10px;
+  }
+
+  .search-group {
+    max-width: 50%; /* أقل كمان */
+    border-radius: 14px;
+  }
+
+  .search-filter input {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .search-filter button {
+    font-size: 12px;
+    margin-right: 8px;
+  }
+
+  .suggestions {
+    width: 50%;
+    max-width: 50%; /* نفس search-group */
+    border-radius: 12px;
+    font-size: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .suggestions p {
+    padding: 7px 14px;
+  }
+
+    .footer-content {
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
 
-  .carousel .movie-card {
-    width: 140px;
-    height: 225px;
-    margin: 0 10px;
+  .footer-logo,
+  .footer-contact,
+  .footer-social {
+    flex: 1 1 auto;
+    text-align: center;
   }
 
-  .carousel button {
-    font-size: 22px;
-    width: 34px;
-    height: 34px;
-  }
-
-  .prev {
-    left: 2%;
-  }
-
-  .next {
-    right: 2%;
-  }
-
-  /* قسم الأفلام */
-  .movie-section .movie-slider {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 90px;
-  }
-
-  .movie-section .movie-card {
-    max-width: 180px;
-  }
-
-  .movie-info h4 {
-    font-size: 17px;
-  }
-
-  .movie-info p {
-    font-size: 15px;
-  }
-
-  /* البحث والفلاتر */
-  .search-filter {
-    padding: 22px 12px;
-  }
-
-  .search-group {
-    max-width: 70%;
-    border-radius: 18px;
-  }
-
-  .search-filter input {
-    padding: 14px 18px;
-    font-size: 16px;
-  }
-
-  .search-filter button {
-    font-size: 14px;
-    margin-right: 12px;
-  }
-
-  .suggestions {
-    max-width: 70%;
-    font-size: 15px;
-  }
-
-  .suggestions p {
-    padding: 10px 18px;
-  }
-}
-
-/* ====== شاشات كبيرة (لابتوب) ====== */
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* كاروسيل */
-  .carousel {
-    height: 320px;
-  }
-
-  .carousel .movie-slider {
-    width: 60%;
-    gap: 40px;
-  }
-
-  .carousel .movie-card {
-    width: 160px;
-    height: 250px;
-    margin: 0 12px;
-  }
-
-  .carousel button {
-    font-size: 24px;
-    width: 36px;
-    height: 36px;
-  }
-
-  .prev {
-    left: 1.5%;
-  }
-
-  .next {
-    right: 1.5%;
-  }
-
-  /* قسم الأفلام */
-  .movie-section .movie-slider {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 90px;
-  }
-
-  .movie-section .movie-card {
-    max-width: 200px;
-  }
-
-  .movie-info h4 {
+  .footer-logo h2,
+  .footer-contact h3,
+  .footer-social h3 {
     font-size: 18px;
   }
 
-  .movie-info p {
-    font-size: 16px;
+  .footer-contact p,
+  .footer-logo p {
+    font-size: 12px;
   }
 
-  /* البحث والفلاتر */
-  .search-filter {
-    padding: 24px 15px;
-  }
-
-  .search-group {
-    max-width: 65%;
-    border-radius: 20px;
-  }
-
-  .search-filter input {
-    padding: 16px 20px;
-    font-size: 17px;
-  }
-
-  .search-filter button {
-    font-size: 15px;
+  .social-icons a {
+    font-size: 18px;
     margin-right: 15px;
   }
 
-  .suggestions {
-    max-width: 65%;
-    font-size: 16px;
+  .footer-bottom {
+    font-size: 12px;
   }
 
-  .suggestions p {
-    padding: 12px 20px;
-  }
+
 }
 
-/* ====== شاشات كبيرة جدًا (سطح المكتب) ====== */
-@media (min-width: 1200px) {
-  /* كاروسيل */
-  .carousel {
-    height: 350px;
-  }
-
-  .carousel .movie-slider {
-    width: 70%;
-    gap: 50px;
-  }
-
-  .carousel .movie-card {
-    width: 170px;
-    height: 270px;
-    margin: 0 15px;
-  }
-
-  .carousel button {
-    font-size: 26px;
-    width: 40px;
-    height: 40px;
-  }
-
-  .prev {
-    left: 1%;
-  }
-
-  .next {
-    right: 1%;
-  }
-
-  /* قسم الأفلام */
-  .movie-section .movie-slider {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 90px;
-  }
-
-  .movie-section .movie-card {
-    max-width: 210px;
-  }
-
-  .movie-info h4 {
-    font-size: 19px;
-    margin-bottom: 10px;
-  }
-
-  .movie-info p {
-    font-size: 17px;
-    margin-bottom: 8px;
-  }
-
-  /* البحث والفلاتر */
-  .search-filter {
-    padding: 25px 20px;
-  }
-
-  .search-group {
-    max-width: 60%;
-    border-radius: 22px;
-  }
-
-  .search-filter input {
-    padding: 18px 22px;
-    font-size: 18px;
-  }
-
-  .search-filter button {
-    font-size: 16px;
-    margin-right: 18px;
-  }
-
-  .suggestions {
-    max-width: 60%;
-    font-size: 17px;
-  }
-
-  .suggestions p {
-    padding: 14px 22px;
-  }
-}
-
-/* ====== شاشات عريضة جدًا ====== */
-@media (min-width: 1400px) {
-  /* كاروسيل */
-  .carousel {
-    height: 380px;
-  }
-
-  .carousel .movie-slider {
-    width: 75%;
-    gap: 60px;
-  }
-
-  .carousel .movie-card {
-    width: 190px;
-    height: 300px;
-    margin: 0 18px;
-  }
-
-  /* قسم الأفلام */
-  .movie-section .movie-slider {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 100px;
-  }
-
-  .movie-section .movie-card {
-    max-width: 220px;
-  }
-
-  /* البحث والفلاتر */
-  .search-group {
-    max-width: 50%;
-  }
-
-  .suggestions {
-    max-width: 50%;
-  }
-}
-
-/* ====== إصلاح مشترك لتنسيق الاقتراحات ====== */
-.suggestions {
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
