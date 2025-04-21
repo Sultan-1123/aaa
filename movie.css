@@ -142,8 +142,8 @@ color: white;
 
 
 
-
-  .movie-container {
+/* Base styles */
+.movie-container {
     display: flex;
     max-width: 900px;
     margin: 30px auto;
@@ -152,7 +152,7 @@ color: white;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   }
-
+  
   .movie-container img {
     width: 300px;
     height: 500px;
@@ -165,12 +165,12 @@ color: white;
   .movie-container img:hover {
     transform: scale(1.05);
   }
-
+  
   .movie-info {
     color: #ccc;
     flex: 1;
   }
-
+  
   .movie-info h2 {
     margin-top: 0;
     font-size: 28px;
@@ -178,12 +178,12 @@ color: white;
     border-bottom: 2px solid #8B0000;
     padding-bottom: 10px;
   }
-
+  
   .movie-info p {
     font-size: 16px;
     line-height: 1.6;
   }
-
+  
   .movie-meta {
     display: flex;
     flex-wrap: wrap;
@@ -202,7 +202,7 @@ color: white;
     color: #8B0000;
     margin-right: 5px;
   }
-
+  
   .cast {
     margin-top: 20px;
   }
@@ -229,14 +229,14 @@ color: white;
     transition: all 0.3s ease;
   }
   
-
-
-  .movie-info label, .movie-info select, .movie-info button {
+  .movie-info label, 
+  .movie-info select, 
+  .movie-info button {
     display: block;
     margin: 15px 0;
     font-size: 16px;
   }
-
+  
   .movie-info select {
     padding: 10px;
     border: none;
@@ -251,7 +251,7 @@ color: white;
   .movie-info select:focus {
     outline: 2px solid #8B0000;
   }
-
+  
   .movie-info button {
     padding: 12px 24px;
     border: none;
@@ -263,18 +263,18 @@ color: white;
     transition: all 0.3s ease;
     margin-top: 20px;
   }
-
+  
   .movie-info button:hover {
     background-color: #5f0000;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
-
+  
   .back-home {
     text-align: center;
     margin: 30px 0;
   }
-
+  
   .back-home button {
     padding: 10px 20px;
     background-color: #333;
@@ -285,11 +285,121 @@ color: white;
     cursor: pointer;
     transition: all 0.3s ease;
   }
-
+  
   .back-home button:hover {
     background-color: #444;
     transform: translateY(-2px);
   }
+  
+  /* Media Queries */
+  
+  /* Large devices (desktops, less than 1200px) */
+  @media (max-width: 1200px) {
+    .movie-container {
+      max-width: 90%;
+    }
+  }
+  
+  /* Medium devices (tablets, less than 992px) */
+  @media (max-width: 992px) {
+    .movie-container {
+      max-width: 95%;
+      padding: 15px;
+    }
+    
+    .movie-container img {
+      width: 250px;
+      height: 420px;
+    }
+    
+    .movie-info h2 {
+      font-size: 24px;
+    }
+  }
+  
+  /* Small devices (small tablets, less than 766px) */
+  @media (max-width: 766px) {
+    .movie-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .movie-container img {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 220px;
+      height: 370px;
+    }
+    
+    .movie-info {
+      width: 100%;
+    }
+  }
+  
+  /* Extra small devices (large phones, less than 576px) */
+  @media (max-width: 576px) {
+    .movie-container {
+      padding: 12px;
+      margin: 20px auto;
+    }
+    
+    .movie-info h2 {
+      font-size: 22px;
+    }
+    
+    .movie-meta {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .movie-meta div {
+      margin-right: 0;
+    }
+    
+    .movie-info button {
+      width: 100%;
+    }
+  }
+  
+  /* Mobile phones (less than 414px) */
+  @media (max-width: 414px) {
+    .movie-container {
+      padding: 10px;
+      border-radius: 8px;
+    }
+    
+    .movie-container img {
+      width: 180px;
+      height: 300px;
+      border-radius: 30px;
+    }
+    
+    .movie-info h2 {
+      font-size: 20px;
+    }
+    
+    .movie-info p {
+      font-size: 14px;
+    }
+    
+    .cast-list {
+      gap: 6px;
+    }
+    
+    .cast-item {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  }
+
+
+
+
+
+
+
+
+
 
 /* ============= الفوتر المحسّن ============= */
 .footer {
@@ -441,178 +551,3 @@ color: #aaa;
 }
 
 
-/* أصغر الشاشات - جوالات صغيرة */
-@media (max-width: 414px) {
-.movie-container {
-  flex-direction: column;
-  align-items: center;
-  padding: 15px;
-}
-
-.movie-container img {
-  width: 200px;
-  height: 300px;
-  margin-right: 0;
-  margin-bottom: 20px;
-  border-radius: 20px;
-}
-
-.movie-info {
-  text-align: center;
-}
-
-.movie-info select, .movie-info button {
-  max-width: 100%;
-}
-
-.movie-meta {
-  justify-content: center;
-}
-
-.cast-list {
-  justify-content: center;
-}
-.container {
-  width: 95%;
-}
-
-.footer-content {
-  gap: 20px;
-}
-
-.footer-logo h2,
-.footer-contact h3,
-.footer-social h3 {
-  font-size: 16px;
-  padding-bottom: 8px;
-}
-
-.footer-logo p,
-.footer-contact p {
-  font-size: 12px;
-}
-
-.social-icons {
-  gap: 10px;
-}
-
-.social-icons a {
-  width: 30px;
-  height: 30px;
-}
-}
-
-
-@media (max-width: 576px) {
-
-
-.footer {
-  padding: 15px 0 5px;
-}
-
-.footer-logo h2,
-.footer-contact h3,
-.footer-social h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-
-.footer-logo p,
-.footer-contact p {
-  font-size: 13px;
-}
-
-.social-icons a {
-  width: 32px;
-  height: 32px;
-  font-size: 14px;
-}
-
-.footer-bottom {
-  font-size: 12px;
-  margin-top: 15px;
-  padding-top: 10px;
-}
-
-
-}
-/* شاشات متوسطة - تابلت */
-@media (max-width: 768px) {
-.movie-container {
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.movie-container img {
-  width: 80%;
-  height: auto;
-  margin-right: 0;
-  margin-bottom: 20px;
-  border-radius: 30px;
-}
-
-.movie-info {
-  text-align: center;
-}
-
-.movie-info select, .movie-info button {
-  max-width: 100%;
-}
-
-.movie-meta {
-  justify-content: center;
-}
-
-.cast-list {
-  justify-content: center;
-}
-.footer-content {
-  text-align: center;
-  gap: 20px;
-}
-
-.footer-logo h2:after,
-.footer-contact h3:after,
-.footer-social h3:after {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.footer-contact p {
-  justify-content: center;
-}
-
-.social-icons {
-  justify-content: center;
-}
-}
-
-/* شاشات كبيرة - لابتوبات */
-@media (max-width: 992px) {
-.movie-container {
-  flex-direction: column;
-  align-items: center;
-}
-
-.movie-container img {
-  width: 300px;
-  height: 500px;
-  margin: 0 0 20px 0;
-  border-radius: 40px;
-}
-
-.movie-info {
-  text-align: center;
-}
-.footer-content {
-  gap: 40px;
-}
-}
-
-
-
-
-
-  
- 
